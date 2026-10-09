@@ -11,6 +11,7 @@
 | D-07 | Sarah Hallock, Executive Director, is the CommuniCare content owner/requestor. Requests are submitted through Cumberland County ITS helpdesk tickets. | Approved |
 | D-08 | Cumberland County ITS owns accessibility acceptance. Albeiro Florez and Adriana perform the review. Target: WCAG 2.2 Level AA. | Approved |
 | D-09 | Albeiro Florez is the primary GitHub publishing approver. | Approved |
+| D-10 | Use Cumberland County Laserfiche Forms for secure referral intake. CommuniCare remains a static GitHub Pages site; the referral form will be linked or embedded after the current approved form is rebuilt in Laserfiche. Sensitive referral data will not be stored in GitHub Pages. | Approved direction; implementation pending |
 
 ## Open implementation items
 
@@ -19,3 +20,5 @@
 - Final GitHub branch protection/ruleset configuration
 - Astro project scaffold
 - Content inventory and migration disposition
+- Laserfiche public form URL and embed code
+- Laserfiche referral workflow validation, including secure notification/routing

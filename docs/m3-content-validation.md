@@ -74,7 +74,7 @@ Use:
 - referrals@cccommunicare.org
 - 910-829-9017
 
-The supplied referral form still needs to be reviewed before determining whether it is published as an accessible download or handled another way.
+The supplied referral form has been reviewed. The selected direction is to rebuild the current approved form in Cumberland County Laserfiche Forms. The Astro site will link to or embed the Laserfiche form after the public form URL/embed code is available and the integration is validated.
 
 ### Donations
 
@@ -161,6 +161,7 @@ The CommuniCare version must be adapted to the actual site, especially:
 | New program names | Complete |
 | Basic Outpatient / ASAP Adolescent / ASAP Adult / Mental Health confirmation | Pending |
 | Referral form review | Complete; source copy contains populated personal information and must not be published as-is |
+| Laserfiche referral architecture | Approved direction; public URL/embed code pending updated approved form and Laserfiche build |
 | JCPC-funded program list and County logo attribution | Pending |
 | MORES crisis number(s) | Pending |
 | Donation platform | Pending |
@@ -176,7 +177,7 @@ M3 is complete when:
 - every legacy page has a final disposition
 - every program/service intended for launch is confirmed current
 - all public contact information is approved
-- referral form handling is decided, with a clean current version approved for publication if a downloadable form is used
+- referral form handling is decided, with the approved current form rebuilt in Laserfiche and the public integration validated
 - JCPC funding attribution requirements are documented
 - policy/privacy content has an approved source/reviewer
 - new content requirements and owners are documented
@@ -189,3 +190,12 @@ The 5.23.23 referral form supplied by CommuniCare has been reviewed. It collects
 The supplied copy also contains populated personal/referral information, so it must not be committed to the public repository or published as-is.
 
 The public site may offer a clean accessible blank form after CommuniCare provides or approves a current version and ITS confirms the approved return/submission method. See `docs/referral-form-review.md`.
+
+
+## Laserfiche referral direction
+
+Once Sarah provides the updated approved blank referral form, Albeiro Florez will build the referral workflow in Cumberland County Laserfiche Forms and provide the public form URL and embed code.
+
+The preferred user experience is an embedded referral experience that visually feels like part of the CommuniCare website. If embedding creates accessibility, session, mobile, or browser issues, the site will provide a direct secure Laserfiche link as the fallback.
+
+Sensitive referral data must remain in Laserfiche rather than GitHub Pages.

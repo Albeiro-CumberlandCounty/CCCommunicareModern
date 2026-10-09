@@ -160,7 +160,7 @@ The CommuniCare version must be adapted to the actual site, especially:
 | Staff-directory direction | Complete |
 | New program names | Complete |
 | Basic Outpatient / ASAP Adolescent / ASAP Adult / Mental Health confirmation | Pending |
-| Referral form review | Pending |
+| Referral form review | Complete; source copy contains populated personal information and must not be published as-is |
 | JCPC-funded program list and County logo attribution | Pending |
 | MORES crisis number(s) | Pending |
 | Donation platform | Pending |
@@ -176,7 +176,16 @@ M3 is complete when:
 - every legacy page has a final disposition
 - every program/service intended for launch is confirmed current
 - all public contact information is approved
-- referral form handling is decided
+- referral form handling is decided, with a clean current version approved for publication if a downloadable form is used
 - JCPC funding attribution requirements are documented
 - policy/privacy content has an approved source/reviewer
 - new content requirements and owners are documented
+
+
+## Referral form review outcome
+
+The 5.23.23 referral form supplied by CommuniCare has been reviewed. It collects sensitive personal, clinical, court, insurance, and financial information and must not be implemented as a GitHub Pages web form.
+
+The supplied copy also contains populated personal/referral information, so it must not be committed to the public repository or published as-is.
+
+The public site may offer a clean accessible blank form after CommuniCare provides or approves a current version and ITS confirms the approved return/submission method. See `docs/referral-form-review.md`.

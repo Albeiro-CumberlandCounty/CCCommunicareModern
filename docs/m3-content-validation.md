@@ -1,5 +1,9 @@
 # M3 Content Validation Working Plan
 
+## Parallel milestone status
+
+M3 remains open and ongoing while awaiting Sarah Hallock's remaining confirmations and updated program content. M4 Information Architecture is proceeding in parallel using only confirmed decisions, with M3-pending pages explicitly marked as provisional/unpublished.
+
 ## Purpose
 
 M3 determines what legacy content should actually appear on the modern CommuniCare website.

@@ -118,6 +118,16 @@ The following should not be treated as independent new-site pages. They are hist
 - `index-old.html`
 - `usercontrols/announcement__1-20-2015.ascx` and its VB.NET code-behind
 
+## Exact duplicate file findings
+
+Git blob hashes show three exact duplicate groups:
+
+- `CommuniCare, Collaboration, and You (no SFP)-2.pdf` is byte-for-byte identical to `_BAK/company_overview__03-08-2012.pdf`.
+- `Intensive Services Network Graphic Depiction.pdf` is byte-for-byte identical to `isn.pdf`.
+- `usercontrols/announcement.ascx.vb` is byte-for-byte identical to `usercontrols/announcement__1-20-2015.ascx.vb`.
+
+These duplicates should not be migrated twice. Content owners still need to decide the preferred public filename/document, if any.
+
 ## Dynamic/server-side marker findings
 
 ### Announcement control

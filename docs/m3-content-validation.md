@@ -4,7 +4,7 @@
 
 M3 determines what legacy content should actually appear on the modern CommuniCare website.
 
-The M2 inventory classified what exists. M3 now requires business/content approval for each item using one of five actions:
+The M2 inventory classified what exists. M3 now records final or provisional business dispositions using one of five actions:
 
 - Keep
 - Rewrite
@@ -12,143 +12,161 @@ The M2 inventory classified what exists. M3 now requires business/content approv
 - Archive
 - Remove
 
-A recommended first-pass disposition for all 55 non-backup legacy ASPX pages is in `docs/m3-content-disposition.csv`.
+The working page-level matrix is in `docs/m3-content-disposition.csv`.
+
+Sarah Hallock's 2026-10-09 business response is summarized in `docs/m3-sarah-business-response.md`.
 
 ## Known approved contact content
 
 Use the following current contact information for the new site:
 
 - Address: 109 Bradford Ave, Fayetteville, NC 28301
-- Phone: 910-829-9017
-- Email: shallock@cccommunicare.org
+- Main phone: 910-829-9017
+- Executive Director email: shallock@cccommunicare.org
+- Referral email: referrals@cccommunicare.org
 - Facebook: https://www.facebook.com/CCCommuniCareFayettevilleNC/
 - LinkedIn: https://www.linkedin.com/company/cumberland-county-communicare-inc-/
 
-Initial release contact method:
+Initial release contact model:
 
 - public contact details only
-- no website contact form
-- no collection of sensitive information
+- no general website contact form
+- no collection of sensitive information through GitHub Pages
+- referral instructions may include an approved downloadable form after the supplied form is reviewed
 
-## Strong recommendations already supported by the legacy review
+## Confirmed content decisions from Sarah
 
-### Remove from the modern site
-
-- `comment_form.aspx`: orphaned Cumberland County Public Health ASP.NET/Telerik page
-- `online_referral.aspx`: old sensitive FrontPage referral form
-- hand-maintained `sitemap.aspx`: replace with generated Astro sitemap
-
-### Archive, not publish by default
-
-- all dated/backup copies
-- 2008-era training-library content unless CommuniCare explicitly wants it retained
-- older-navigation program pages whose programs are no longer active
-- duplicate legacy pages such as older JAC/BOC/HBOC variants
-
-### Rewrite before publication
-
-The following current-navigation content is too old to copy as-is and should be fact-checked before launch:
-
-- homepage
-- mission/about content
-- programs and services
-- referrals/how-to-get-help information
-- board
-- staff
-- resources
-- HIPAA/privacy notice
-- terms/privacy language
-
-## Recommended new content groups
-
-The legacy site has many overlapping pages. The modern site should consolidate content into a smaller, clearer structure.
-
-### Home
-
-Short current summary of CommuniCare, key services/programs, primary contact/get-help actions, and current announcements.
-
-### About
-
-Potential sections:
-
-- Mission and vision
-- Who we serve
-- Capabilities
-- Community partners
-- Board, if CommuniCare wants the board listed publicly
-
-### Programs and Services
-
-Use a program/service overview plus individual detail pages only for programs that are confirmed active.
-
-Potential legacy source pages include:
+### Rewrite/update
 
 - Juvenile Assessment Center
 - FACT
-- Basic Outpatient Counseling
+- Intensive Services Network
+- Reclaiming Futures
+- Who We Are / foundational organization content
+- HIPAA / Notice of Privacy Practices
+- Terms / Privacy language
+
+### Remove
+
 - Home-Based Outpatient Counseling
-- CGPP
+- Cumberland Gang Prevention Partnership
+- Teens Making A Change
+- old Juvenile Crime Prevention page/content
+- substance abuse prevention content
+- Board of Directors listing
+- old training presentations/documents
+
+### Add
+
+- PEACE Project Domestic Violence Intervention Program
+- Tailored Care Management Services
+- Community Based Capacity Restoration Program
+- Skill Building Classes
+- upgraded data/content areas
+- social media content/integration
+
+### Referral/Get Help
+
+A public referral path is approved.
+
+Use:
+
+- referrals@cccommunicare.org
+- 910-829-9017
+
+The supplied referral form still needs to be reviewed before determining whether it is published as an accessible download or handled another way.
+
+### Donations
+
+CommuniCare does not currently have an approved online donation platform but wants one established.
+
+Do not publish a donation button until a provider/account/link is approved.
+
+### Staff directory
+
+Do not plan on a maintained individual staff directory for launch.
+
+Prefer stable role/service contacts instead.
+
+Known role contact:
+
+- Clinical Director: 910-222-6388
+
+Exact MORES crisis service public number(s) still need to be supplied.
+
+### JCPC funding attribution
+
+Do not retain the old Juvenile Crime Prevention page.
+
+Instead:
+
+- identify which current programs are JCPC funded
+- display the approved Cumberland County logo on those program pages
+- include any required funding attribution language
+
+## Remaining no-assumption questions
+
+Sarah did not explicitly annotate the following items in her response, so ITS should not infer a decision:
+
+- Basic Outpatient Counseling
 - ASAP Adolescent
 - ASAP Adult
-- other programs only if confirmed current
+- Mental health services
 
-### Resources
+Substance abuse treatment remains in scope at the category level because Sarah specifically directed ITS to delete prevention, not treatment. Current program names/details still need validation.
 
-Rebuild from current approved external resources. Do not copy the old link directory wholesale.
+## New content still needed
 
-### Get Involved
+Current approved copy or source material is still needed for:
 
-Donation and volunteer information only if still current. Confirm the current donation platform before publishing a donation button.
+- rewritten JAC
+- updated FACT
+- rewritten ISN
+- rewritten Reclaiming Futures
+- PEACE Project Domestic Violence Intervention Program
+- Tailored Care Management Services
+- Community Based Capacity Restoration Program
+- Skill Building Classes
+- current organization/Who We Are content
+- any data/statistics Sarah wants displayed
 
-### Contact
+## Policy/privacy source
 
-Use the approved current contact details listed above.
+Sarah asked for the new Terms/Privacy language to mirror Cumberland County's approach.
 
-### Privacy / HIPAA / Terms
+The current County privacy policy source is recorded in `docs/privacy-source.md`.
 
-Require a current content-owner/legal/privacy review before publication. Legacy text should be treated as source material only.
+The CommuniCare version must be adapted to the actual site, especially:
 
-## Information that must be confirmed with Sarah Hallock
-
-The following are the highest-value questions. They do not require a 55-page review if Sarah can answer them at the program level.
-
-1. Which programs and services are active today?
-2. Which old program names should no longer appear anywhere on the site?
-3. Does CommuniCare still want a public Program Referrals or Get Help page?
-4. If yes, what are the current referral instructions and destinations?
-5. Does CommuniCare still accept online donations? If yes, what is the approved current donation link/provider?
-6. Should the website list the Board of Directors? If yes, provide the current approved roster.
-7. Should the website list staff? If yes, provide the current approved roster and which contact details may be public.
-8. Should the old public training files remain available? Recommended default: no.
-9. Provide the current approved HIPAA/Notice of Privacy Practices text or confirm who will validate the existing notice.
-10. Confirm whether the Terms/Privacy page should include any language beyond GA4 analytics, external-link disclaimer, and standard website privacy information.
-11. Identify any new content/pages that are not represented in the legacy site.
-12. Confirm whether Facebook and LinkedIn should appear in the header/footer, footer only, or Contact page only.
-
-## Recommended review process
-
-1. ITS provides Sarah the M3 content disposition matrix.
-2. Sarah confirms the active program/service list first.
-3. ITS updates all related legacy page dispositions based on those program decisions.
-4. Sarah confirms current board/staff/referral/donation/policy information.
-5. ITS marks each row in the matrix with a final action.
-6. M3 is complete when all launch content has a final disposition and all required new content has an identified owner/source.
+- static GitHub Pages hosting
+- Google Analytics 4
+- external links
+- email/phone contact
+- no sensitive-data web form in the initial release
 
 ## Current M3 status
 
 | Task | Status |
 |---|---|
-| Create first-pass content disposition recommendations | Complete |
-| Record known current contact/social details | Complete |
-| Identify obvious Remove/Archive candidates | Complete |
-| Identify overlapping pages to merge | Complete |
-| Identify content requiring current business validation | Complete |
-| Sarah confirms active programs/services | Pending |
-| Sarah confirms referral/donation details | Pending |
-| Sarah confirms board/staff publication choices | Pending |
-| Current HIPAA/privacy/terms approval | Pending |
-| Final Keep/Rewrite/Merge/Archive/Remove matrix | Pending |
-| New-content requirements confirmed | Pending |
+| First-pass content disposition recommendations | Complete |
+| Known contact/social details | Complete |
+| Obvious Remove/Archive candidates | Complete |
+| Overlapping page merge candidates | Complete |
+| Sarah business response recorded | Complete |
+| JAC / FACT / ISN / Reclaiming Futures direction | Complete |
+| Removal decisions for HBOC / CGPP / TMAC / juvenile prevention / training | Complete |
+| Referral contact method | Complete |
+| Board publication decision | Complete |
+| Staff-directory direction | Complete |
+| New program names | Complete |
+| Basic Outpatient / ASAP Adolescent / ASAP Adult / Mental Health confirmation | Pending |
+| Referral form review | Pending |
+| JCPC-funded program list and County logo attribution | Pending |
+| MORES crisis number(s) | Pending |
+| Donation platform | Pending |
+| Current HIPAA/privacy wording or approval | Pending |
+| Detailed new/rewritten program content | Pending |
+| Final page-by-page matrix | In progress |
 
 ## M3 completion criteria
 
@@ -158,7 +176,7 @@ M3 is complete when:
 - every legacy page has a final disposition
 - every program/service intended for launch is confirmed current
 - all public contact information is approved
-- board/staff publishing choices are approved
-- referral and donation links are approved or excluded
-- policy/privacy content has an identified approved source
-- new content requirements are documented
+- referral form handling is decided
+- JCPC funding attribution requirements are documented
+- policy/privacy content has an approved source/reviewer
+- new content requirements and owners are documented

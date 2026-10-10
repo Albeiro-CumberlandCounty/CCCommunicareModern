@@ -52,10 +52,7 @@ html {
 body {
   margin: 0;
   min-width: 20rem;
-  background:
-    radial-gradient(circle at 95% 7%, rgb(11 131 198 / 0.10), transparent 24rem),
-    radial-gradient(circle at 3% 28%, rgb(21 150 74 / 0.08), transparent 22rem),
-    var(--color-bg);
+  background: #f4f8f7;
 }
 
 img, picture, svg { display: block; max-width: 100%; }
@@ -252,6 +249,9 @@ address { font-style: normal; }
   position: relative;
   overflow: hidden;
   padding-block: clamp(4rem, 10vw, 7rem);
+  background:
+    linear-gradient(135deg, rgb(223 243 251 / 0.78), rgb(229 244 232 / 0.72) 58%, rgb(250 249 246 / 0.92));
+  border-bottom: 1px solid var(--color-border);
 }
 
 .page-hero::after {
@@ -300,7 +300,10 @@ address { font-style: normal; }
 .button--secondary { border-color: var(--color-brand-green-700); background: var(--color-surface); color: var(--color-brand-green-700); }
 
 .section { padding-block: var(--space-8); }
-.section--surface { background: rgb(255 255 255 / 0.78); border-block: 1px solid var(--color-border); }
+.section--surface {
+  background: #eef5f6;
+  border-block: 1px solid var(--color-border);
+}
 .prose { max-width: var(--reading-width); }
 
 .card-grid {
@@ -311,10 +314,10 @@ address { font-style: normal; }
 
 .card {
   padding: var(--space-6);
-  border: 1px solid var(--color-border);
+  border: 1px solid #c8d9df;
   border-radius: var(--radius-lg);
   background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .card h2, .card h3 { margin-top: 0; }

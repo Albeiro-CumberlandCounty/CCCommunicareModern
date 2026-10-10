@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { ProgramContent } from '../types/program';
+
+interface Props {
+  program: ProgramContent;
+}
+
+const { program } = Astro.props;
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Programs & Services', href: '/programs-services/' },
+  { label: program.title }
+];
+---
+
+<BaseLayout
+  title={program.title}
+  description={program.summary}
+  canonicalPath={program.canonicalPath}
+  breadcrumbs={breadcrumbs}
+>
+  <section class="page-hero">
+    <div class="container prose">
+      <p class="eyebrow">Programs & Services</p>
+      <h1>{program.title}</h1>
+      <p class="lede">{program.summary}</p>
+    </div>
+  </section>
+
+  <div class="section section--surface">
+    <div class="container prose">
+      {program.audience && (
+        <section aria-labelledby="program-audience">
+          <h2 id="program-audience">Who This Program Serves</h2>
+          <p>{program.audience}</p>
+        </section>
+      )}
+
+      {program.services && program.services.length > 0 && (
+        <section aria-labelledby="program-services">
+          <h2 id="program-services">Services Provided</h2>
+          <ul>{program.services.map((service) => <li>{service}</li>)}</ul>
+        </section>
+      )}
+
+      {program.eligibility && (
+        <section aria-labelledby="program-eligibility">
+          <h2 id="program-eligibility">Eligibility</h2>
+          <p>{program.eligibility}</p>
+        </section>
+      )}
+
+      {program.referralInstructions && (
+        <section aria-labelledby="program-referrals">
+          <h2 id="program-referrals">How to Get Started</h2>
+          <p>{program.referralInstructions}</p>
+        </section>
+      )}
+
+      {program.contact && (program.contact.label || program.contact.phone || program.contact.email) && (
+        <section aria-labelledby="program-contact">
+          <h2 id="program-contact">Program Contact</h2>
+          {program.contact.label && <p>{program.contact.label}</p>}
+          {program.contact.phone && (
+            <p><a href={`tel:${program.contact.phone.replace(/[^+\d]/g, '')}`}>{program.contact.phone}</a></p>
+          )}
+          {program.contact.email && (
+            <p><a href={`mailto:${program.contact.email}`}>{program.contact.email}</a></p>
+          )}
+        </section>
+      )}
+
+      {program.showReferralLink && (
+        <p><a class="button button--primary" href="/referrals/#start-referral">Start a Referral</a></p>
+      )}
+
+      {program.resources && program.resources.length > 0 && (
+        <section aria-labelledby="program-resources">
+          <h2 id="program-resources">Related Resources</h2>
+          <ul>
+            {program.resources.map((resource) => (
+              <li><a href={resource.href}>{resource.label}</a></li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {program.fundingAttribution && (
+        <aside aria-label="Funding acknowledgment">
+          <p>{program.fundingAttribution.text}</p>
+          {program.fundingAttribution.logoSrc && program.fundingAttribution.logoAlt && (
+            <img src={program.fundingAttribution.logoSrc} alt={program.fundingAttribution.logoAlt} loading="lazy" />
+          )}
+        </aside>
+      )}
+    </div>
+  </div>
+</BaseLayout>

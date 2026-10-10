@@ -1,39 +1,120 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const serviceAreas = [
+  'Juvenile Assessment Center',
+  'FACT',
+  'Intensive Services Network',
+  'Reclaiming Futures',
+  'PEACE Project',
+  'Tailored Care Management',
+  'Community Based Capacity Restoration',
+  'Skill Building Classes'
+];
 ---
 
-<BaseLayout title="Home" canonicalPath="/">
-  <section class="page-hero">
+<BaseLayout
+  title="Home"
+  canonicalPath="/"
+  description="Cumberland County CommuniCare connects youth, adults, families, and community partners with programs, services, and referral support."
+>
+  <section class="home-hero">
+    <div class="container home-hero__grid">
+      <div class="home-hero__content">
+        <p class="eyebrow">Cumberland County CommuniCare</p>
+        <h1>Support starts with the right connection.</h1>
+        <p class="lede">
+          Explore CommuniCare programs and services, find referral information, or contact our team to get started.
+        </p>
+        <div class="actions">
+          <a class="button button--primary" href="/referrals/#start-referral">Start a Referral</a>
+          <a class="button button--secondary" href="/programs-services/">Explore Programs & Services</a>
+        </div>
+      </div>
+
+      <aside class="home-hero__help" aria-labelledby="home-help-heading">
+        <p class="home-hero__help-label">Need help getting started?</p>
+        <h2 id="home-help-heading">Talk with CommuniCare</h2>
+        <p>Reach the team directly for service and referral information.</p>
+        <div class="home-hero__contact-list">
+          <a href="tel:+19108299017">
+            <span>Call</span>
+            <strong>910-829-9017</strong>
+          </a>
+          <a href="mailto:referrals@cccommunicare.org">
+            <span>Email referrals</span>
+            <strong>referrals@cccommunicare.org</strong>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section home-pathways" aria-labelledby="pathways-heading">
     <div class="container">
-      <p class="eyebrow">Cumberland County CommuniCare</p>
-      <h1>Support for youth, adults & families starts here.</h1>
-      <p class="lede">
-        This is the new CommuniCare website foundation. Current program and organizational content is being validated with CommuniCare before launch.
-      </p>
-      <div class="actions">
-        <a class="button button--primary" href="/programs-services/">Programs & Services</a>
-        <a class="button button--secondary" href="/referrals/">Get Help / Referrals</a>
+      <div class="section-heading">
+        <p class="eyebrow">Find your next step</p>
+        <h2 id="pathways-heading">Start where you need to.</h2>
+        <p>Use these quick paths to reach the most requested parts of the site.</p>
+      </div>
+
+      <div class="home-pathways__grid">
+        <article class="pathway-card">
+          <span class="pathway-card__number" aria-hidden="true">01</span>
+          <h3>Programs & Services</h3>
+          <p>See the current program and service areas CommuniCare is preparing for the modern site.</p>
+          <a href="/programs-services/">View Programs & Services</a>
+        </article>
+
+        <article class="pathway-card">
+          <span class="pathway-card__number" aria-hidden="true">02</span>
+          <h3>Get Help & Referrals</h3>
+          <p>Find referral contact information and the secure referral path as it becomes available.</p>
+          <a href="/referrals/">Get referral information</a>
+        </article>
+
+        <article class="pathway-card">
+          <span class="pathway-card__number" aria-hidden="true">03</span>
+          <h3>Community Resources</h3>
+          <p>Access the resource area as CommuniCare reviews and publishes current, approved links.</p>
+          <a href="/resources/">View Resources</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section section--surface">
-    <div class="container card-grid">
-      <article class="card">
-        <h2>Programs & Services</h2>
-        <p>Explore the current program structure being prepared for the modern site.</p>
-        <a href="/programs-services/">View Programs & Services</a>
-      </article>
-      <article class="card">
-        <h2>Get Help</h2>
-        <p>Learn how to contact CommuniCare and, once approved, start a secure referral through Laserfiche.</p>
-        <a href="/referrals/">Referral information</a>
-      </article>
-      <article class="card">
-        <h2>Contact</h2>
-        <p>Find CommuniCare's approved address, phone number, and public contact information.</p>
-        <a href="/contact/">Contact CommuniCare</a>
-      </article>
+  <section class="section section--surface home-services" aria-labelledby="services-heading">
+    <div class="container home-services__grid">
+      <div class="section-heading">
+        <p class="eyebrow">Programs & Services</p>
+        <h2 id="services-heading">Current service areas being prepared for launch.</h2>
+        <p>
+          CommuniCare is updating program content to reflect current services. These confirmed areas are part of the modern site structure.
+        </p>
+        <a class="text-link" href="/programs-services/">See the full Programs & Services page</a>
+      </div>
+
+      <ul class="service-list" aria-label="Confirmed CommuniCare program and service areas">
+        {serviceAreas.map((service) => (
+          <li>{service}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section home-contact" aria-labelledby="contact-heading">
+    <div class="container home-contact__panel">
+      <div>
+        <p class="eyebrow">Connect with CommuniCare</p>
+        <h2 id="contact-heading">Questions about services or referrals?</h2>
+        <p>
+          Call the main office, send a referral email, or visit the Contact page for CommuniCare's public contact information.
+        </p>
+      </div>
+      <div class="home-contact__actions">
+        <a class="button button--primary" href="tel:+19108299017">Call 910-829-9017</a>
+        <a class="button button--secondary" href="/contact/">Contact CommuniCare</a>
+      </div>
     </div>
   </section>
 </BaseLayout>

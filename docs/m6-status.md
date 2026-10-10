@@ -15,20 +15,20 @@ M3 remains open in parallel for content validation. M6 intentionally uses placeh
 | SVG favicon | Complete | Optimized tree emblem based on current CommuniCare mark |
 | Route shells | Complete | Home, About, Programs & Services, Referrals, Resources, Contact, HIPAA, Privacy |
 | Secure referral placeholder | Complete | Laserfiche embed/link arrives after approved form build |
-| Global production header/navigation/footer | M7 | Current M6 shell is intentionally minimal |
+| Global production header/navigation/footer | M7 | Implemented in M7 |
 | GitHub Pages workflow | M14 | Not added in M6 |
 | GA4 | M12 / implementation item | Measurement ID still pending |
 | Final content | M3/M8-M11 | Content-owner approval required |
 
-## Validation
+## Local validation
 
-Run locally:
+M6 was validated on the County workstation after PR #10 and the follow-up PR #11:
 
-```bash
-npm install
-npm run check
-npm run build
-npm run dev
-```
+- `npm install` completed successfully using the Windows/system CA configuration
+- `npm run check` completed with 0 errors, 0 warnings, and 0 hints
+- `npm run build` completed successfully and generated all 8 current static routes
+- `npm run dev` served the site successfully for browser review
+- the corrected full CommuniCare logo rendered successfully
+- `package-lock.json` was committed for reproducible installs
 
-The code scaffold is ready for local/runtime validation. Dependency installation could not be executed in the isolated authoring environment because registry.npmjs.org is unavailable there. Run the commands above locally after pulling the branch; commit the generated npm lockfile in a follow-up PR if needed.
+Node 22.16.0 produced an engine warning from `undici`, which prefers Node 22.19.0 or newer. The M6 build still completed successfully. Upgrade within the Node 22 line before CI/deployment work.

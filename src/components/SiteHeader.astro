@@ -1,0 +1,97 @@
+---
+import BrandLogo from './BrandLogo.astro';
+
+const navigation = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Programs & Services', href: '/programs-services/' },
+  { label: 'Get Help', href: '/referrals/' },
+  { label: 'Resources', href: '/resources/' },
+  { label: 'Contact', href: '/contact/' }
+];
+
+const pathname = Astro.url.pathname;
+const isExactCurrent = (href: string) => pathname === href;
+const isSectionActive = (href: string) =>
+  href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(href);
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <BrandLogo class="site-header__brand" />
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-navigation-panel"
+      data-nav-toggle
+    >
+      <span class="nav-toggle__text">Menu</span>
+      <span class="nav-toggle__bars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <div
+      id="site-navigation-panel"
+      class="site-header__navigation"
+      data-nav-panel
+      data-open="false"
+    >
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          {navigation.map((item) => (
+            <li>
+              <a
+                class:list={['primary-nav__link', isSectionActive(item.href) && 'is-active']}
+                href={item.href}
+                aria-current={isExactCurrent(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <a class="button button--primary site-header__cta" href="/referrals/#start-referral">
+        Start a Referral
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuButton = document.querySelector<HTMLButtonElement>('[data-nav-toggle]');
+  const menuPanel = document.querySelector<HTMLElement>('[data-nav-panel]');
+
+  if (menuButton && menuPanel) {
+    const setMenuOpen = (open: boolean) => {
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuPanel.dataset.open = String(open);
+    };
+
+    menuButton.addEventListener('click', () => {
+      setMenuOpen(menuButton.getAttribute('aria-expanded') !== 'true');
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        setMenuOpen(false);
+        menuButton.focus();
+      }
+    });
+
+    menuPanel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    const desktopViewport = window.matchMedia('(min-width: 62.001rem)');
+    desktopViewport.addEventListener('change', (event) => {
+      if (event.matches) setMenuOpen(false);
+    });
+  }
+</script>

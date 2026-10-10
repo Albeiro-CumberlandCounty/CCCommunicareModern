@@ -1,0 +1,18 @@
+---
+interface Props {
+  href?: string;
+  class?: string;
+}
+
+const { href = '/', class: className = '' } = Astro.props;
+---
+
+<a class:list={["brand-logo", className]} href={href} aria-label="CommuniCare home">
+  <img
+    src="/brand/communicare-logo.svg"
+    alt="Cumberland County CommuniCare"
+    width="300"
+    height="300"
+    decoding="async"
+  />
+</a>

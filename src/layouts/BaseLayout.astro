@@ -1,0 +1,54 @@
+---
+import BrandLogo from '../components/BrandLogo.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalPath?: string;
+}
+
+const {
+  title,
+  description = 'Cumberland County CommuniCare provides programs and behavioral health services for youth, adults, and families.',
+  canonicalPath = Astro.url.pathname
+} = Astro.props;
+
+const pageTitle = title === 'Home' ? 'Cumberland County CommuniCare' : `${title} | Cumberland County CommuniCare`;
+const canonicalUrl = new URL(canonicalPath, Astro.site ?? Astro.url.origin);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#0868a8" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="foundation-header">
+      <div class="container foundation-header__inner">
+        <BrandLogo />
+        <p class="foundation-header__note">Modern site foundation</p>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
+
+    <footer class="foundation-footer">
+      <div class="container foundation-footer__inner">
+        <p><strong>Cumberland County CommuniCare</strong></p>
+        <p>109 Bradford Ave, Fayetteville, NC 28301 · <a href="tel:+19108299017">910-829-9017</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

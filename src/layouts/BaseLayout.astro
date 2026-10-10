@@ -1,17 +1,26 @@
 ---
-import BrandLogo from '../components/BrandLogo.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
 import '../styles/global.css';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
 
 interface Props {
   title: string;
   description?: string;
   canonicalPath?: string;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 const {
   title,
   description = 'Cumberland County CommuniCare provides programs and behavioral health services for youth, adults, and families.',
-  canonicalPath = Astro.url.pathname
+  canonicalPath = Astro.url.pathname,
+  breadcrumbs = []
 } = Astro.props;
 
 const pageTitle = title === 'Home' ? 'Cumberland County CommuniCare' : `${title} | Cumberland County CommuniCare`;
@@ -28,27 +37,23 @@ const canonicalUrl = new URL(canonicalPath, Astro.site ?? Astro.url.origin);
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#0868a8" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
     <title>{pageTitle}</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="foundation-header">
-      <div class="container foundation-header__inner">
-        <BrandLogo />
-        <p class="foundation-header__note">Modern site foundation</p>
-      </div>
-    </header>
+    <SiteHeader />
 
     <main id="main-content" tabindex="-1">
+      {breadcrumbs.length > 0 && (
+        <div class="container">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
+      )}
       <slot />
     </main>
 
-    <footer class="foundation-footer">
-      <div class="container foundation-footer__inner">
-        <p><strong>Cumberland County CommuniCare</strong></p>
-        <p>109 Bradford Ave, Fayetteville, NC 28301 · <a href="tel:+19108299017">910-829-9017</a></p>
-      </div>
-    </footer>
+    <SiteFooter />
   </body>
 </html>

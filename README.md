@@ -46,7 +46,7 @@ npm run build
 npm run preview
 ```
 
-`node_modules/`, `.astro/`, and `dist/` are ignored. Commit the npm lockfile when it is generated so future CI/deployment uses reproducible dependency versions.
+`node_modules/`, `.astro/`, and `dist/` are ignored. Commit the npm lockfile so future CI/deployment uses reproducible dependency versions.
 
 ## Development workflow
 
@@ -60,4 +60,6 @@ npm run preview
 
 ## Current implementation status
 
-M6 establishes the runnable Astro/static-site foundation, brand tokens, current logo, SVG favicon, base metadata/layout, and initial route shells. M3 content validation remains open in parallel, so unapproved content is intentionally represented by review placeholders rather than copied from the legacy site.
+M7 replaces the temporary M6 site shell with reusable production global components: the CommuniCare header, accessible primary/mobile navigation, Start a Referral CTA, footer, current-page navigation treatment, and reusable breadcrumbs.
+
+M3 content validation remains open in parallel, so unapproved content is still represented by review placeholders rather than copied from the legacy site.

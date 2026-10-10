@@ -1,19 +1,45 @@
-# CCCommunicareModern
+# CommuniCare Website Modernization
 
-Modern, accessible static website for Cumberland County CommuniCare.
+Modern, accessible public-information website for Cumberland County CommuniCare, developed and supported by Cumberland County Innovation & Technology Services (ITS).
 
-## Project baseline
+> **Project status:** In development. The modern site has **not** yet completed content approval, accessibility acceptance, deployment, and production cutover. The existing https://cccommunicare.org domain should not be treated as a live preview of this repository.
 
-- Framework: Astro 7
-- Rendering: static output only
-- Hosting: GitHub Pages
-- Primary domain: https://cccommunicare.org
-- Secondary domain: https://www.cccommunicare.org redirects to the primary domain
-- Accessibility target: WCAG 2.2 Level AA
-- Analytics: Google Analytics 4
-- Backend/database: none in the base project
-- Secure referral intake: Cumberland County Laserfiche Forms
-- Public contact form: not included in the initial release
+## Project at a glance
+
+| Area | Baseline |
+| --- | --- |
+| Framework | Astro 7, TypeScript |
+| Output | Static HTML, CSS, and minimal client-side JavaScript |
+| Planned hosting | GitHub Pages using GitHub Actions |
+| Canonical production domain | https://cccommunicare.org |
+| Accessibility target | WCAG 2.2 Level AA |
+| Analytics | Google Analytics 4, once configured and approved |
+| Secure referrals | Separate Cumberland County Laserfiche Forms workflow, pending approved form and integration |
+| Backend/database | None in the public static website |
+
+## Development progress
+
+- **M0-M2:** Architecture, repository baseline, and legacy inventory documented.
+- **M3:** Content validation remains open while CommuniCare supplies final approvals.
+- **M4-M7:** Information architecture, design system, site foundation, and reusable global components implemented as baselines.
+- **M8:** Homepage implemented; final content and acceptance remain subject to review.
+- **M9:** Reusable program-page template and typed content model implemented; individual program pages await approved content.
+- **M10-M19:** Later content, SEO, quality automation, deployment, acceptance, cutover, operations, and legacy retirement milestones remain to be completed.
+
+These summaries reflect implementation progress, not formal production signoff. For specific decisions and pending items, see the status files below.
+
+## Project documentation
+
+- [Project charter](docs/project-charter.md)
+- [Architecture and approved decisions](docs/architecture.md)
+- [Decision log](docs/open-decisions.md)
+- [Information architecture](docs/information-architecture.md)
+- [Design system](docs/design-system.md)
+- [Accessibility requirements](docs/accessibility.md)
+- [M3 content validation](docs/m3-content-validation.md)
+- [M8 homepage status](docs/m8-status.md)
+- [M9 program-page status](docs/m9-status.md)
+- [Full GitHub Pages modernization project plan](docs/Cumberland_County_CommuniCare_GitHub_Pages_Modernization_Project_Plan.docx)
 
 ## Governance
 
@@ -57,9 +83,3 @@ npm run preview
 5. Review content, accessibility, and visual impact.
 6. Merge approved changes to `main`.
 7. GitHub Actions publishes the site to GitHub Pages after deployment automation is introduced in the deployment milestone.
-
-## Current implementation status
-
-M7 replaces the temporary M6 site shell with reusable production global components: the CommuniCare header, accessible primary/mobile navigation, Start a Referral CTA, footer, current-page navigation treatment, and reusable breadcrumbs.
-
-M3 content validation remains open in parallel, so unapproved content is still represented by review placeholders rather than copied from the legacy site.

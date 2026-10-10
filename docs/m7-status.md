@@ -13,8 +13,8 @@ M3 remains open in parallel for content validation. M7 does not publish unapprov
 | Breadcrumb component | Complete | Reusable semantic component for interior/detail pages |
 | Progressive enhancement | Complete | Core navigation remains available when JavaScript is unavailable |
 | WCAG-oriented interaction baseline | Complete | Keyboard focus, target sizing, semantic landmarks, reduced-motion support |
-| Local Astro check/build | Pending validation | Run on the County workstation before merge |
-| Visual mobile/desktop review | Pending validation | Review the branch locally before merge |
+| Local Astro check/build | Complete | `npm run check` passed with 0 errors, 0 warnings, and 0 hints; production build completed successfully with 8 static pages |
+| Visual mobile/desktop review | Complete | Desktop and narrow/mobile layouts reviewed; mobile menu open/close, Escape behavior, footer navigation, and refreshed section contrast verified |
 
 ## Navigation scope
 
@@ -44,14 +44,17 @@ The footer publishes only currently approved public information:
 
 MORES/crisis numbers are not included because the approved number(s) remain pending.
 
-## Validation before merge
+## Validation completed
 
-Run:
+Validation was completed on the County workstation:
 
-```bash
-npm run check
-npm run build
-npm run dev
-```
+- `npm run check`: 0 errors, 0 warnings, 0 hints
+- `npm run build`: successful, 8 static pages generated
+- desktop header/navigation reviewed
+- narrow/mobile menu opened and closed correctly
+- Escape closed the mobile menu correctly
+- footer sections and navigation links were verified
+- section/background contrast was adjusted and visually reviewed after refresh
+- final production build passed after the styling change
 
-Review at desktop and narrow/mobile widths. Confirm keyboard operation of the menu, visible focus, Escape-to-close behavior, active navigation state, header referral CTA, footer links, and absence of horizontal scrolling.
+M7 is ready for merge.

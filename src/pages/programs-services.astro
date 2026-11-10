@@ -13,22 +13,40 @@ const confirmedPrograms = [
 ];
 ---
 
-<BaseLayout title="Programs & Services" canonicalPath="/programs-services/">
-  <section class="page-hero">
+<BaseLayout
+  title="Programs & Services"
+  canonicalPath="/programs-services/"
+  breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Programs & Services' }]}
+  description="Comprehensive Services. Individualized Support. Community-Based Solutions."
+>
+  <!-- Source: CommuniCare Homepage sequence.docx. Copy is verbatim. -->
+  <header class="editorial-page-hero">
     <div class="container">
-      <p class="eyebrow">Programs & Services</p>
-      <h1>Current services, organized clearly.</h1>
-      <p class="lede">The pages below are the confirmed program/service areas being prepared for the modern site. Final descriptions are pending updated CommuniCare content.</p>
+      <p class="eyebrow">Programs &amp; Services</p>
+      <h1>Comprehensive Services. Individualized Support. Community-Based Solutions.</h1>
+    </div>
+  </header>
+
+  <section class="editorial-section editorial-section--light">
+    <div class="container editorial-prose">
+      <p>The challenges facing individuals and families rarely exist in isolation. Behavioral health concerns, family instability, educational difficulties, substance use, involvement with the justice system, and barriers to accessing essential resources often intersect, requiring coordinated and responsive approaches to care.</p>
+      <p>CommuniCare offers a diverse range of clinical, preventive, rehabilitative, and supportive services designed to address these interconnected needs. Our programs emphasize early identification, individualized intervention, family engagement, and collaboration with the community systems that influence long-term stability and well-being.</p>
+      <p>Whether providing direct behavioral health treatment, supporting youth and families during periods of crisis, coordinating services for individuals with complex needs, or partnering with courts and community agencies, our approach remains centered on helping people achieve meaningful and sustainable progress.</p>
+      <p>Explore our programs and services to learn how CommuniCare supports individuals, strengthens families, and contributes to healthier communities.</p>
+      <article class="card" aria-labelledby="outpatient-preview-title">
+        <h2 id="outpatient-preview-title">Outpatient Behavioral Health Services</h2>
+        <p>Individualized Treatment. Meaningful Support. Lasting Change.</p>
+        <a href="/programs-services/outpatient-behavioral-health/">Outpatient Behavioral Health Services</a>
+      </article>
     </div>
   </section>
-  <section class="section section--surface">
-    <div class="container card-grid">
-      {confirmedPrograms.map((program) => (
-        <article class="card">
-          <h2>{program}</h2>
-          <p>Updated program content is being prepared and will be published after content-owner review.</p>
-        </article>
-      ))}
+
+  <section class="editorial-section editorial-section--blue" aria-labelledby="service-areas-heading">
+    <div class="container">
+      <h2 id="service-areas-heading">Programs &amp; Services</h2>
+      <div class="editorial-program-grid">
+        {confirmedPrograms.map((program) => <div class="editorial-program-grid__item">{program}</div>)}
+      </div>
     </div>
   </section>
 </BaseLayout>

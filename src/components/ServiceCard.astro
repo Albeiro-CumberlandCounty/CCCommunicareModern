@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  href?: string;
+}
+
+const { title, href } = Astro.props;
+---
+
+<li class:list={['editorial-program-grid__item', 'service-card', href && 'service-card--linked']}>
+  {href ? (
+    <a class="service-card__link" href={href}>
+      <span>{title}</span>
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+        <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+  ) : (
+    <span class="service-card__title">{title}</span>
+  )}
+</li>

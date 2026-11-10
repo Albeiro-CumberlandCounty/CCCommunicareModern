@@ -1,0 +1,52 @@
+---
+import ProgramPage from '../../components/ProgramPage.astro';
+import type { ProgramContent } from '../../types/program';
+
+// Source: "CommuniCare Homepage sequence.docx" (Outpatient Behavioral Health Services).
+// This is source-provided copy for review, not independent clinical verification.
+const program: ProgramContent = {
+  title: 'Outpatient Behavioral Health Services',
+  canonicalPath: '/programs-services/outpatient-behavioral-health/',
+  summary: "Emotional, behavioral, and mental health challenges can affect every aspect of an individual's life, including relationships, family functioning, education, employment, and overall well-being. At Cumberland County CommuniCare, our Outpatient Behavioral Health Program provides professional, individualized treatment designed to help children, adolescents, and adults understand and address these challenges while developing the skills and resources necessary for healthier, more stable lives."
+};
+---
+
+<ProgramPage program={program}>
+  <p class="editorial-page-hero__tagline">Individualized Treatment. Meaningful Support. Lasting Change.</p>
+  <p>Our clinical services are grounded in evidence-based practices and a person-centered approach that recognizes each individual's unique experiences, strengths, circumstances, and treatment needs. Through comprehensive clinical assessments, individualized treatment planning, and therapeutic interventions, our licensed therapists and qualified mental health professionals work collaboratively with individuals and families to identify concerns, establish meaningful goals, and support progress toward improved emotional and behavioral functioning.</p>
+
+  <section aria-labelledby="outpatient-approach">
+    <h2 id="outpatient-approach">Our Approach to Treatment</h2>
+    <p>CommuniCare recognizes that behavioral health concerns rarely occur in isolation. Individuals seeking treatment may also be experiencing family conflict, trauma, substance use concerns, educational difficulties, involvement with the justice system, or other circumstances that influence their ability to achieve and sustain positive outcomes.</p>
+    <p>Our approach extends beyond addressing presenting symptoms. We work to understand the underlying factors contributing to behavioral health challenges, strengthen coping and problem-solving skills, improve interpersonal relationships, and promote greater independence and stability.</p>
+    <p>When appropriate, treatment may incorporate family participation, coordination with other service providers, and collaboration with schools, courts, healthcare professionals, and community resources to support continuity of care.</p>
+  </section>
+
+  <section aria-labelledby="outpatient-services">
+    <h2 id="outpatient-services">Outpatient Services Include:</h2>
+    <ul>
+      <li>Comprehensive clinical assessments and individualized treatment planning for children, adolescents and adults</li>
+      <li>Psychological testing and evaluation</li>
+      <li>Medication management</li>
+      <li>Individual therapy for children, adolescents, adults and families</li>
+      <li>Family therapy and interventions to strengthen communication, relationships, and family functioning</li>
+      <li>Treatment addressing trauma, problem sexualized behaviors, emotional regulation, behavioral concerns, and other mental health needs</li>
+      <li>Therapeutic interventions for individuals experiencing substance use and co-occurring behavioral health concerns</li>
+      <li>Referrals and collaboration with community-based services to address additional needs and barriers to treatment</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="outpatient-access">
+    <h2 id="outpatient-access">Accessible Care and Community Connection</h2>
+    <p>As part of CommuniCare's commitment to reducing barriers to behavioral health services, our outpatient program serves individuals with diverse clinical, social, and financial circumstances. Through available funding resources and applicable program arrangements, we strive to expand access to treatment for eligible individuals who are uninsured, underinsured, or otherwise face difficulties obtaining care.</p>
+    <p>Our connection to a network of community-based programs and partnerships allows us to recognize needs that may extend beyond outpatient treatment and help individuals and families identify appropriate resources and additional support.</p>
+  </section>
+
+  <section aria-labelledby="outpatient-commitment">
+    <h2 id="outpatient-commitment">Our Commitment</h2>
+    <p>At CommuniCare, effective outpatient treatment is more than a series of counseling appointments. Counseling is a collaborative process that builds upon individual strengths, promotes personal responsibility, strengthens relationships, and equips people with practical tools to manage challenges and move toward meaningful, lasting change.</p>
+    <p>We believe that quality behavioral health treatment should be accessible, responsive, and grounded in the realities of the people and communities we serve.</p>
+  </section>
+
+  <p><a class="button button--primary" href="/referrals/">Get Help &amp; Referrals</a></p>
+</ProgramPage>

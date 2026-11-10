@@ -20,7 +20,7 @@ const breadcrumbs = [
   canonicalPath={program.canonicalPath}
   breadcrumbs={breadcrumbs}
 >
-  <section class="page-hero">
+  <section class="page-hero program-detail__hero">
     <div class="container prose">
       <p class="eyebrow">Programs & Services</p>
       <h1>{program.title}</h1>
@@ -28,7 +28,7 @@ const breadcrumbs = [
     </div>
   </section>
 
-  <div class="section section--surface">
+  <div class="section section--surface program-detail__content">
     <div class="container prose">
       {program.audience && (
         <section aria-labelledby="program-audience">

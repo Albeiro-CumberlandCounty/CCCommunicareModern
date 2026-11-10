@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ImpactMetrics from '../components/ImpactMetrics.astro';
+import ServiceCard from '../components/ServiceCard.astro';
 
 const serviceAreas = [
   'Juvenile Assessment Center',
@@ -83,11 +84,12 @@ const serviceAreas = [
         <p>CommuniCare offers a diverse range of clinical, preventive, rehabilitative, and supportive services designed to address these interconnected needs. Our programs emphasize early identification, individualized intervention, family engagement, and collaboration with the community systems that influence long-term stability and well-being.</p>
         <p>Whether providing direct behavioral health treatment, supporting youth and families during periods of crisis, coordinating services for individuals with complex needs, or partnering with courts and community agencies, our approach remains centered on helping people achieve meaningful and sustainable progress.</p>
       </div>
-      <div class="editorial-program-grid">
+      <ul class="editorial-program-grid" aria-label="CommuniCare program areas">
         {serviceAreas.map((area) => (
-          <div class="editorial-program-grid__item">{area}</div>
+          <ServiceCard title={area} />
         ))}
-      </div>
+        <ServiceCard title="Outpatient Behavioral Health Services" href="/programs-services/outpatient-behavioral-health/" />
+      </ul>
       <p class="editorial-section__closing">Explore our programs and services to learn how CommuniCare supports individuals, strengthens families, and contributes to healthier communities.</p>
       <a href="/programs-services/" class="button button--primary">View Programs &amp; Services</a>
     </div>

@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "test:site": "node scripts/check-generated-site.mjs"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

@@ -1,0 +1,126 @@
+/* Concept A program discovery and supporting public pages.
+   Text and existing legal/referral placeholders remain unchanged. */
+.editorial-program-grid {
+  list-style: none;
+  margin-block: 2.5rem;
+  padding: 0;
+}
+.editorial-program-grid__item.service-card {
+  display: flex;
+  padding: 0;
+  min-width: 0;
+  min-height: 9.25rem;
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #c5ded9;
+  border-top: 0.25rem solid var(--color-brand-blue-700);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+.editorial-program-grid__item.service-card:nth-child(even) {
+  border-top-color: var(--color-brand-green-600);
+}
+.service-card__title, .service-card__link {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 1.55rem;
+  align-items: flex-start;
+  font-size: 1.04rem;
+  line-height: 1.45;
+  font-weight: 750;
+  color: var(--color-brand-blue-700);
+  overflow-wrap: anywhere;
+}
+.service-card__link {
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  border-radius: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.25em;
+}
+.service-card__link svg { flex: 0 0 auto; }
+.service-card--linked:hover,
+.service-card--linked:focus-within {
+  border-color: var(--color-brand-green-700);
+  background: #f1faf5;
+  box-shadow: 0 0.75rem 2rem rgb(9 54 74 / 0.12);
+}
+.service-card--linked .service-card__link:focus-visible {
+  outline-offset: 0.22rem;
+}
+.program-detail__hero {
+  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+  background: linear-gradient(132deg, #e5f3f2 0%, #f9fcfa 85%);
+}
+.program-detail__hero .container {
+  max-width: 74rem;
+  margin-inline: auto;
+}
+.program-detail__hero h1 {
+  max-width: 19ch;
+  font-size: clamp(2.5rem, 4.5vw, 4.35rem);
+}
+.program-detail__hero .lede {
+  max-width: 65ch;
+  color: var(--color-text);
+  font-size: clamp(1.12rem, 1.7vw, 1.26rem);
+  line-height: 1.7;
+}
+.program-detail__content {
+  background: #fff;
+  padding-block: var(--editorial-space);
+}
+.program-detail__content .container { max-width: 58rem; }
+.program-detail__content p,
+.program-detail__content li { font-size: 1.07rem; line-height: 1.82; }
+.program-detail__content section + section { margin-top: 3rem; }
+.program-detail__content h2 {
+  margin-top: 2.7rem;
+  padding-top: 1.2rem;
+  border-top: 0.18rem solid var(--color-brand-green-600);
+  font-size: clamp(1.75rem, 2.7vw, 2.65rem);
+}
+.program-detail__content ul {
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+.program-detail__content li { padding-left: 0.2rem; }
+.program-detail__content .button { margin-top: 1.2rem; }
+.page-hero .prose { max-width: 57rem; }
+.page-hero .lede { max-width: 64ch; }
+.page-hero h1 { max-width: 21ch; }
+.page-hero .card {
+  max-width: 46rem;
+  padding: clamp(1.35rem, 3vw, 2.75rem);
+  border-left: 0.3rem solid var(--color-brand-green-600);
+  border-radius: 1rem;
+}
+.page-hero .card p { margin-bottom: 1.1rem; }
+.page-hero .card a { overflow-wrap: anywhere; }
+.page-hero .actions { margin-block: 1.5rem 0.5rem; }
+.page-hero .actions a { min-height: 3.2rem; }
+.page-hero .notice, .section .notice {
+  border-left: 0.32rem solid var(--color-brand-green-600);
+  border-radius: 0.6rem;
+  background: #edf7f0;
+  line-height: 1.7;
+  max-width: 57rem;
+}
+/* Resources and policy pages stay recognizably incomplete pending content approval. */
+.page-hero .notice { margin-top: 1.5rem; }
+@media (max-width: 60rem) {
+  .editorial-program-grid__item.service-card { min-height: 7.5rem; }
+  .program-detail__content .container { max-width: min(100%, 58rem); }
+}
+@media (max-width: 38rem) {
+  .editorial-program-grid__item.service-card { min-height: 5.5rem; }
+  .service-card__title, .service-card__link { padding: 1.2rem; }
+  .program-detail__hero h1 { font-size: clamp(2.15rem, 10vw, 3.15rem); }
+  .program-detail__content section + section { margin-top: 2.5rem; }
+  .program-detail__content h2 { margin-top: 2.3rem; }
+  .page-hero .actions .button { width: 100%; }
+}

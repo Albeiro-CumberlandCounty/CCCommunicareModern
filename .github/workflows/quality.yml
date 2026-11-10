@@ -2,8 +2,6 @@ name: Pull request quality checks
 
 on:
   pull_request:
-    branches:
-      - main
 
 permissions:
   contents: read
@@ -25,3 +23,5 @@ jobs:
         run: npm run check
       - name: Build static website
         run: npm run build
+      - name: Check generated page structure and internal links
+        run: npm run test:site

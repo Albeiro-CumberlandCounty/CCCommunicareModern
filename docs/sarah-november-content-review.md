@@ -42,7 +42,7 @@ The homepage source says, "(I am not sure how you feel about adding this section
 
 This includes the reported youth counseling improvement, no-new-complaints, behavior reduction, completion, adult no-new-arrests, permanent housing placement, and emergency-department visit reduction figures. Do not invent denominators or time periods.
 
-After approval, use accessible text-based statistic cards and a source/period note. Keep metrics editable without reworking layout. Do not animate numbers or rely on decorative charts alone.
+The implementation includes `src/data/impact-metrics.ts` with a typed, intentionally empty `impactMetrics` array and `src/components/ImpactMetrics.astro` for accessible cards. After approval, add exact approved statements and required reporting period, source, methodology, and approval reference; no numeric card appears until real records are supplied. Keep metrics editable without reworking layout. Do not animate numbers or rely on decorative charts alone.
 
 ## Content and factual review required before merging for public preview
 

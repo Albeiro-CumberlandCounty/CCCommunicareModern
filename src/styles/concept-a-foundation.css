@@ -1,0 +1,105 @@
+/* Concept A: community-first editorial, shared design foundation.
+   Changes presentation only. Brand assets and CommuniCare-approved copy are unchanged. */
+:root {
+  --container: 78rem;
+  --reading-width: 46rem;
+  --color-bg: #f8faf8;
+  --color-surface-muted: #f1f6f4;
+  --color-border: #d1e0dc;
+  --shadow-sm: 0 0.25rem 1.5rem rgb(9 54 74 / 0.06);
+  --shadow-md: 0 1.25rem 3.25rem rgb(9 54 74 / 0.1);
+  --editorial-space: clamp(4rem, 8vw, 7.5rem);
+}
+html { font-size: 112.5%; line-height: 1.72; }
+body { background: var(--color-bg); }
+.container { width: min(calc(100% - clamp(2rem, 5vw, 5rem)), var(--container)); }
+main { min-height: 50vh; }
+p, li, address { line-height: 1.76; }
+p { max-width: 70ch; }
+h1, h2, h3 { line-height: 1.13; letter-spacing: -0.022em; overflow-wrap: break-word; }
+h1 { letter-spacing: -0.04em; }
+h2 { font-size: clamp(1.85rem, 3vw, 3rem); }
+h3 { font-size: clamp(1.25rem, 1.8vw, 1.7rem); }
+a { text-underline-offset: 0.2em; }
+.button {
+  min-height: 3rem;
+  padding-inline: 1.35rem;
+  border-radius: 0.65rem;
+  font-size: 0.94rem;
+  line-height: 1.3;
+  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+.button--secondary:hover, .button--secondary:focus-visible {
+  border-color: var(--color-brand-green-700);
+  background: var(--color-brand-green-100);
+  color: var(--color-brand-green-700);
+}
+.button:focus-visible, a:focus-visible, button:focus-visible {
+  outline: 0.2rem solid var(--color-focus);
+  outline-offset: 0.23rem;
+}
+.site-header {
+  background: rgb(255 255 255 / 0.98);
+  box-shadow: 0 0.25rem 1.25rem rgb(24 34 45 / 0.045);
+}
+.site-header__inner { min-height: 6rem; gap: 1rem; }
+.brand-logo { padding: 0.12rem; }
+.brand-logo img { height: 4.7rem; object-fit: contain; }
+.primary-nav__link { min-height: 3rem; font-weight: 700; font-size: 0.89rem; }
+.primary-nav__link.is-active {
+  background: var(--color-brand-blue-100);
+  box-shadow: inset 0 -0.16rem 0 var(--color-brand-green-600);
+}
+.nav-toggle { min-height: 3rem; }
+.breadcrumbs { padding-block: 1rem; font-size: 0.91rem; }
+.breadcrumbs__separator { color: #738a97; }
+.eyebrow {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: 0.095em;
+}
+.lede { font-size: clamp(1.12rem, 1.8vw, 1.35rem); }
+.section { padding-block: var(--editorial-space); }
+.page-hero { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
+.page-hero .container { max-width: 66rem; }
+.card {
+  border-color: var(--color-border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+.card p { max-width: 64ch; }
+.prose { max-width: var(--reading-width); }
+.notice { font-size: 1rem; }
+.site-footer {
+  margin-top: 0;
+  border-top: 0.3rem solid var(--color-brand-green-600);
+}
+.site-footer__grid {
+  gap: clamp(1.5rem, 3vw, 3.25rem);
+  padding-block: clamp(3rem, 5vw, 5rem);
+}
+.site-footer__heading { font-size: 1.14rem; }
+.site-footer__links { gap: 0.65rem; }
+.site-footer__links a { display: inline-block; min-height: 1.65rem; }
+.site-footer__bottom { font-size: 0.86rem; }
+@media (max-width: 75rem) {
+  .site-header__inner { gap: 0.5rem; }
+  .site-header__navigation { gap: 0.5rem; }
+  .primary-nav__link { padding-inline: 0.55rem; }
+}
+@media (max-width: 62rem) {
+  .site-header__inner { flex-wrap: wrap; }
+  .brand-logo img { height: 4.1rem; }
+  .primary-nav__link { font-size: 1rem; }
+  .site-header__navigation { padding-block: 1rem; }
+}
+@media (max-width: 38rem) {
+  html { font-size: 100%; }
+  .container { width: min(calc(100% - 2rem), var(--container)); }
+  .editorial-section, .section { padding-block: 3.5rem; }
+  .site-footer__grid { gap: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button, .primary-nav__link { transition: none; }
+}

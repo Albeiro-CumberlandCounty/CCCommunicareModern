@@ -86,6 +86,9 @@ const breadcrumbs = [
         </section>
       )}
 
+      <!-- Program-specific approved sections retain the shared accessible page shell. -->
+      <slot />
+
       {program.fundingAttribution && (
         <aside aria-label="Funding acknowledgment">
           <p>{program.fundingAttribution.text}</p>

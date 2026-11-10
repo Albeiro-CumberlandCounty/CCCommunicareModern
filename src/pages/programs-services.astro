@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
 
 const confirmedPrograms = [
   'Juvenile Assessment Center',
@@ -44,9 +45,9 @@ const confirmedPrograms = [
   <section class="editorial-section editorial-section--blue" aria-labelledby="service-areas-heading">
     <div class="container">
       <h2 id="service-areas-heading">Programs &amp; Services</h2>
-      <div class="editorial-program-grid">
-        {confirmedPrograms.map((program) => <div class="editorial-program-grid__item">{program}</div>)}
-      </div>
+      <ul class="editorial-program-grid" aria-label="CommuniCare program areas">
+        {confirmedPrograms.map((program) => <ServiceCard title={program} />)}
+      </ul>
     </div>
   </section>
 </BaseLayout>

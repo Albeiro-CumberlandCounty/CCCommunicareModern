@@ -2,13 +2,35 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About" canonicalPath="/about/">
-  <section class="page-hero">
-    <div class="container prose">
-      <p class="eyebrow">About CommuniCare</p>
-      <h1>Who We Are</h1>
-      <p class="lede">CommuniCare is updating its organizational story, mission, capabilities, and current service information for the modern website.</p>
-      <div class="notice"><strong>Content status:</strong> Updated copy is pending CommuniCare review and approval.</div>
+<BaseLayout
+  title="About"
+  canonicalPath="/about/"
+  description="Founded in 1998, CommuniCare is a nonprofit, CARF-accredited behavioral health organization dedicated to improving lives, strengthening families, and creating opportunities for positive, lasting change."
+  breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]}
+>
+  <!-- Source: Website Redesign 10.docx. Editorial paragraphs preserved verbatim. -->
+  <header class="editorial-page-hero">
+    <div class="container">
+      <p class="eyebrow">Welcome to Cumberland County CommuniCare</p>
+      <h1>Strengthening Individuals. Empowering Families. Building a Healthier Community.</h1>
+      <p class="editorial-page-hero__tagline">Compassionate Care. Proven Experience. Community Commitment.</p>
+    </div>
+  </header>
+
+  <section class="editorial-section editorial-section--light">
+    <div class="container editorial-prose">
+      <p>For more than 28 years, Cumberland County CommuniCare, Inc. has been a trusted community partner, providing comprehensive behavioral health services, early intervention, prevention, and family support to children, adolescents, adults, and families throughout Cumberland County and surrounding communities.</p>
+      <p>Founded in 1998, CommuniCare is a nonprofit, CARF-accredited behavioral health organization dedicated to improving lives, strengthening families, and creating opportunities for positive, lasting change. Our approach combines evidence-based practices, individualized care, and collaborative community partnerships to address the complex challenges individuals and families face.</p>
+      <h2>Meeting People Where They Are. Supporting Them Where They Want to Go.</h2>
+      <p>We recognize that behavioral health challenges rarely occur in isolation. Mental health conditions, substance use disorders, trauma, family instability, involvement with the justice system, and barriers to essential resources can significantly affect an individual's well-being and quality of life.</p>
+      <p>CommuniCare responds to these challenges through an integrated, person-centered approach that addresses behavioral health needs while promoting resilience, personal accountability, family stability, and long-term success.</p>
+      <p>Our comprehensive programs and services include mental health and substance use treatment, clinical and psychological assessments, care management, crisis intervention, family strengthening, youth mentoring, prevention and early intervention, and specialized services for individuals involved with the juvenile and adult justice systems.</p>
+      <h2>Connecting Care, Community, and Opportunity.</h2>
+      <p>Through longstanding partnerships with local courts, schools, public agencies, healthcare organizations, and community stakeholders, CommuniCare helps bridge gaps in services, reduce barriers to treatment, and develop meaningful alternatives to deeper involvement in the justice system.</p>
+      <p>We are especially committed to serving individuals and families who are vulnerable, underserved, uninsured, or facing circumstances that make accessing appropriate care difficult.</p>
+      <p>At CommuniCare, we believe every individual deserves access to compassionate support, meaningful opportunities, and the resources needed to build a healthier, more stable future.</p>
+      <h2>More Than Services. A Commitment to Our Community.</h2>
+      <a class="button button--primary" href="/programs-services/">Programs &amp; Services</a>
     </div>
   </section>
 </BaseLayout>

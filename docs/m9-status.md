@@ -1,6 +1,6 @@
 # M9 Status: Program and Service Content
 
-## Scope of foundation work (PR #19)
+## Scope of foundation work (PR #20)
 
 M9 is **in progress**. Content-owner validation under M3 remains open. This initial implementation supplies a reusable Astro page template and typed content fields without creating routes, publishing placeholders as program facts, or migrating legacy program text.
 
@@ -34,4 +34,4 @@ Before any individual program detail page is added:
 5. Review content, keyboard navigation, headings, zoom/reflow, links, and responsive layout.
 6. Obtain CommuniCare review/signoff before treating the page as final.
 
-The existing Programs & Services landing page remains unchanged in this foundation PR.
+The original M9 foundation PR did not alter the Programs & Services landing page. A later November content review PR stages the new Outpatient Behavioral Health page, extends the shared template with a slot for approved long-form copy, and presents the landing page with source-provided overview text. See `docs/sarah-november-content-review.md`. Content-owner approval and final accessibility review are still required before merging/publishing those pages.

@@ -1,0 +1,15 @@
+---
+import { impactMetrics } from '../data/impact-metrics';
+---
+
+{impactMetrics.length > 0 && (
+  <ul class="editorial-impact-grid" aria-label="CommuniCare approved impact statistics">
+    {impactMetrics.map((metric) => (
+      <li class="editorial-impact-grid__card">
+        <p class="editorial-impact-grid__value">{metric.value}</p>
+        <p>{metric.exactStatement}</p>
+        <p class="editorial-impact-grid__source">Reporting period: {metric.reportingPeriod}. Source: {metric.source}.</p>
+      </li>
+    ))}
+  </ul>
+)}

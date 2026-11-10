@@ -23,7 +23,7 @@ Modern, accessible public-information website for Cumberland County CommuniCare,
 - **M3:** Content validation remains open while CommuniCare supplies final approvals.
 - **M4-M7:** Information architecture, design system, site foundation, and reusable global components implemented as baselines.
 - **M8:** Homepage implemented; final content and acceptance remain subject to review.
-- **M9:** Reusable program-page template and typed content model implemented; individual program pages await approved content.
+- **M9:** Reusable program-page template and typed content model implemented; Sarah's new homepage, About, and Outpatient content is staged for review, with other program pages still awaiting approved content.
 - **M10-M19:** Later content, SEO, quality automation, deployment, acceptance, cutover, operations, and legacy retirement milestones remain to be completed.
 
 These summaries reflect implementation progress, not formal production signoff. For specific decisions and pending items, see the status files below.
@@ -39,6 +39,7 @@ These summaries reflect implementation progress, not formal production signoff. 
 - [M3 content validation](docs/m3-content-validation.md)
 - [M8 homepage status](docs/m8-status.md)
 - [M9 program-page status](docs/m9-status.md)
+- [Sarah November content intake, source mapping, and approval checklist](docs/sarah-november-content-review.md)
 - [Full GitHub Pages modernization project plan](docs/Cumberland_County_CommuniCare_GitHub_Pages_Modernization_Project_Plan.docx)
 
 ## Governance
@@ -82,4 +83,4 @@ npm run preview
 4. Open a pull request.
 5. Review content, accessibility, and visual impact.
 6. Merge approved changes to `main`.
-7. GitHub Actions publishes the site to GitHub Pages after deployment automation is introduced in the deployment milestone.
+7. GitHub Actions checks pull requests; the existing GitHub Pages stakeholder preview is published only when its manual workflow is run. Production cutover remains a separate milestone.

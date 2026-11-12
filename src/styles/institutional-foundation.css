@@ -1,0 +1,86 @@
+/* Modern Institutional foundation. Approved 2026-11-12.
+ * Loaded after the earlier Concept A sheets to replace desktop overscaling
+ * without changing Sarah Hallock's source wording or the mobile menu behavior.
+ * Future cleanup may consolidate legacy style sheets after visual acceptance.
+ */
+:root {
+  --container: 80rem;
+  --reading-width: 50rem;
+  --institutional-navy: #075681;
+  --institutional-teal: #087e86;
+  --institutional-mist: #eaf4f6;
+  --institutional-panel: #ffffff;
+  --institutional-border: #cbdde2;
+  --institutional-space: clamp(2.5rem, 4vw, 3.5rem);
+  --editorial-space: var(--institutional-space);
+  --shadow-sm: 0 0.15rem 0.7rem rgb(4 53 80 / 0.055);
+  --shadow-md: 0 0.65rem 1.6rem rgb(4 53 80 / 0.085);
+}
+html { font-size: 100%; line-height: 1.6; }
+body { min-width: 0; background: #f8fafb; font-size: 1rem; }
+p, li, address { line-height: 1.62; }
+p { max-width: 72ch; }
+h1, h2, h3 { line-height: 1.18; letter-spacing: -0.024em; overflow-wrap: anywhere; }
+h1 { font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -0.032em; }
+h2 { font-size: clamp(1.55rem, 2.4vw, 2.125rem); }
+h3 { font-size: clamp(1.25rem, 1.8vw, 1.5rem); }
+.container { width: min(calc(100% - 4rem), var(--container)); }
+.section, .editorial-section { padding-block: var(--institutional-space); }
+.page-hero, .editorial-page-hero { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.page-hero h1, .editorial-page-hero h1, .program-detail__hero h1 {
+  max-width: 30ch;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 1.15;
+}
+.editorial-hero { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.editorial-hero h1 { max-width: 26ch; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.14; }
+.editorial-hero__tagline, .editorial-page-hero__tagline { font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.5; }
+.editorial-hero__grid > div > p:not(.eyebrow), .editorial-section__body p, .editorial-prose > p { font-size: 1rem; line-height: 1.64; }
+.editorial-hero__side h2 { font-size: clamp(1.4rem, 2.1vw, 1.8rem); }
+.editorial-heading h2, .editorial-section__intro h2, .editorial-contact h2 {
+  max-width: 32ch;
+  font-size: clamp(1.65rem, 2.65vw, 2.125rem);
+  line-height: 1.2;
+}
+.editorial-section__lead { font-size: 1.075rem; line-height: 1.5; }
+.editorial-heading { margin-bottom: 1.5rem; }
+.editorial-heading p + p, .editorial-section__body p + p { margin-top: 0.95rem; }
+.editorial-section__intro::before { margin-bottom: 0.9rem; }
+.editorial-split { gap: clamp(1.4rem, 3vw, 3.25rem); }
+.editorial-program-grid { gap: 1rem; margin-block: 1.5rem; }
+.editorial-program-grid__item.service-card { min-height: 6.5rem; border-radius: 0.75rem; }
+.service-card__title, .service-card__link { padding: 1.1rem; font-size: 1rem; }
+.editorial-prose > h2 { margin-top: 2rem; padding-top: 0.9rem; font-size: clamp(1.6rem, 2.4vw, 2rem); }
+.editorial-contact { gap: 1.5rem; }
+.editorial-paths { gap: 0.7rem; margin-top: 1.25rem; }
+.editorial-paths a { min-height: 3rem; padding-block: 0.7rem; }
+.card { border-radius: 0.75rem; padding: clamp(1.25rem, 2vw, 1.75rem); }
+.button { min-height: 2.9rem; border-radius: 0.625rem; padding: 0.7rem 1.15rem; font-size: 0.98rem; }
+.site-header__inner { min-height: 5.3rem; }
+.brand-logo img { height: 4rem; }
+.primary-nav__link { min-height: 2.75rem; }
+.breadcrumbs { padding-block: 0.75rem; }
+.eyebrow { font-size: 0.79rem; }
+.site-footer__grid { padding-block: clamp(2rem, 3vw, 3rem); }
+.site-footer { margin-top: 0; }
+.program-detail__hero { padding-block: clamp(2.5rem, 4vw, 4rem); }
+.program-detail__hero .lede { font-size: 1.1rem; line-height: 1.65; }
+.program-detail__content { padding-block: var(--institutional-space); }
+.program-detail__content p, .program-detail__content li { font-size: 1rem; line-height: 1.7; }
+.program-detail__content section + section { margin-top: 1.75rem; }
+.program-detail__content h2 { margin-top: 1.8rem; padding-top: 0.8rem; font-size: 1.75rem; }
+@media (max-width: 62rem) {
+  .container { width: min(calc(100% - 3rem), var(--container)); }
+  .brand-logo img { height: 3.8rem; }
+}
+@media (max-width: 38rem) {
+  .container { width: min(calc(100% - 2rem), var(--container)); }
+  h1, .editorial-hero h1, .editorial-page-hero h1, .program-detail__hero h1 { font-size: clamp(2rem, 8vw, 2.375rem); }
+  h2, .editorial-section__intro h2, .editorial-heading h2, .editorial-contact h2 { font-size: clamp(1.55rem, 6.8vw, 1.875rem); }
+  .editorial-section, .section { padding-block: 2.5rem; }
+  .page-hero, .editorial-page-hero, .editorial-hero { padding-block: 2.5rem; }
+  .site-header__inner { min-height: 4.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

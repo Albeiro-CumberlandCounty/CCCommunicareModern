@@ -1,17 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
+import ServiceGrid from '../components/ServiceGrid.astro';
 
-const confirmedPrograms = [
-  'Juvenile Assessment Center',
-  'FACT',
-  'Intensive Services Network',
-  'Reclaiming Futures',
-  'PEACE Project Domestic Violence Intervention Program',
-  'Tailored Care Management Services',
-  'Community Based Capacity Restoration Program',
-  'Skill Building Classes'
-];
+
 ---
 
 <BaseLayout
@@ -34,7 +25,7 @@ const confirmedPrograms = [
       <p>CommuniCare offers a diverse range of clinical, preventive, rehabilitative, and supportive services designed to address these interconnected needs. Our programs emphasize early identification, individualized intervention, family engagement, and collaboration with the community systems that influence long-term stability and well-being.</p>
       <p>Whether providing direct behavioral health treatment, supporting youth and families during periods of crisis, coordinating services for individuals with complex needs, or partnering with courts and community agencies, our approach remains centered on helping people achieve meaningful and sustainable progress.</p>
       <p>Explore our programs and services to learn how CommuniCare supports individuals, strengthens families, and contributes to healthier communities.</p>
-      <article class="card" aria-labelledby="outpatient-preview-title">
+      <article class="card institutional-featured-program" aria-labelledby="outpatient-preview-title">
         <h2 id="outpatient-preview-title">Outpatient Behavioral Health Services</h2>
         <p>Individualized Treatment. Meaningful Support. Lasting Change.</p>
         <a href="/programs-services/outpatient-behavioral-health/">Outpatient Behavioral Health Services</a>
@@ -45,9 +36,7 @@ const confirmedPrograms = [
   <section class="editorial-section editorial-section--blue" aria-labelledby="service-areas-heading">
     <div class="container">
       <h2 id="service-areas-heading">Programs &amp; Services</h2>
-      <ul class="editorial-program-grid" aria-label="CommuniCare program areas">
-        {confirmedPrograms.map((program) => <ServiceCard title={program} />)}
-      </ul>
+      <ServiceGrid label="CommuniCare program directory" />
     </div>
   </section>
 </BaseLayout>

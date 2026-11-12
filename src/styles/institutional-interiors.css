@@ -1,0 +1,98 @@
+/* Modern Institutional interior pages, source words remain untouched. */
+.institutional-about-story {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 1.25rem;
+  max-width: 80rem;
+}
+.institutional-about-panel {
+  min-width: 0;
+  padding: clamp(1.5rem,2.4vw,2.25rem);
+  border: 1px solid var(--institutional-border);
+  border-top: 0.22rem solid var(--institutional-teal);
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.institutional-about-panel--wide { grid-column: 1/-1; }
+.institutional-about-panel--wide:first-child {
+  background: linear-gradient(112deg,#f1f8fa,#fff);
+}
+.institutional-about-panel h2 {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  font-size: clamp(1.5rem,2.2vw,2rem);
+}
+.institutional-about-panel p { font-size: 1rem; line-height: 1.68; max-width: 73ch; }
+.institutional-about-panel p:first-child { margin-top: 0; }
+.institutional-about-panel p:last-child { margin-bottom: 0; }
+.institutional-about-panel--end {
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  background: #edf5f8;
+}
+.institutional-about-panel--end h2 { margin: 0; }
+.institutional-featured-program {
+  max-width: none;
+  margin-top: 1.5rem;
+  border-left: 0.3rem solid var(--institutional-teal);
+  box-shadow: var(--shadow-sm);
+}
+.institutional-featured-program h2 { margin-top: 0; font-size: 1.45rem; }
+.institutional-featured-program a { font-weight: 750; }
+.editorial-program-grid, .institutional-service-grid { margin-top: 1.3rem; }
+.program-detail__content .container { max-width: 65rem; }
+.program-detail__content section {
+  padding: 1.35rem 1.5rem;
+  border: 1px solid var(--institutional-border);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+.program-detail__content section + section { margin-top: 1.25rem; }
+.program-detail__content section h2 { margin: 0 0 0.9rem; padding: 0; border: 0; }
+.program-detail__content section p:first-of-type { margin-top: 0; }
+.program-detail__content section p:last-of-type { margin-bottom: 0; }
+.institutional-contact-card {
+  max-width: 52rem;
+  background: #fff;
+  border: 1px solid var(--institutional-border);
+  border-left: 0.3rem solid var(--institutional-teal);
+}
+.institutional-contact-card h2 { font-size: 1.5rem; }
+.institutional-contact-card p { margin-block: 0.9rem; }
+.institutional-contact-card a { overflow-wrap: anywhere; }
+.institutional-contact-panel {
+  display: flex; gap: 1.5rem; justify-content: space-between;
+  align-items: center; flex-wrap: wrap;
+  padding: clamp(1.25rem,2.7vw,2rem);
+  border: 1px solid var(--institutional-border);
+  border-left: 0.28rem solid var(--institutional-teal);
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.institutional-contact-panel__details {
+  display: flex; flex-direction: column; align-items: flex-start;
+  gap: 0.35rem; min-width: 0; max-width: 100%;
+}
+.institutional-contact-panel__details h2 { margin: 0 0 0.35rem; font-size: 1.45rem; }
+.institutional-contact-panel__details a { overflow-wrap: anywhere; }
+.institutional-contact-panel__actions {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem;
+}
+.institutional-resource-help, .institutional-referral-help { background: #f2f7f7; }
+.institutional-policy-notice {
+  padding: 1.5rem;
+  border-left: 0.3rem solid var(--institutional-teal);
+  background: #eaf4f6; color: var(--color-text);
+}
+@media (max-width: 62rem) {
+  .institutional-about-story { grid-template-columns: minmax(0,1fr); }
+  .institutional-about-panel--wide { grid-column: auto; }
+}
+@media (max-width: 38rem) {
+  .institutional-about-panel { padding: 1.25rem; }
+  .program-detail__content section { padding: 1.15rem; }
+  .institutional-contact-panel__actions, .institutional-contact-panel__actions .button { width: 100%; }
+}

@@ -1,0 +1,15 @@
+---
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+---
+<aside class:list={['institutional-contact-panel', compact && 'institutional-contact-panel--compact']} aria-label="CommuniCare contact options">
+  <div class="institutional-contact-panel__details">
+    <h2>Contact CommuniCare</h2>
+    <a href="tel:+19108299017">910-829-9017</a>
+    <a href="mailto:referrals@cccommunicare.org">referrals@cccommunicare.org</a>
+  </div>
+  <div class="institutional-contact-panel__actions">
+    <a class="button button--primary" href="/referrals/">Get Help &amp; Referrals</a>
+    <a class="button button--secondary" href="/contact/">Contact CommuniCare</a>
+  </div>
+</aside>

@@ -1,18 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ImpactMetrics from '../components/ImpactMetrics.astro';
-import ServiceCard from '../components/ServiceCard.astro';
+import ServiceGrid from '../components/ServiceGrid.astro';
+import QuickAccessCard from '../components/QuickAccessCard.astro';
 
-const serviceAreas = [
-  'Juvenile Assessment Center',
-  'FACT',
-  'Intensive Services Network',
-  'Reclaiming Futures',
-  'PEACE Project Domestic Violence Intervention Program',
-  'Tailored Care Management Services',
-  'Community Based Capacity Restoration Program',
-  'Skill Building Classes'
-];
+
 ---
 
 <BaseLayout
@@ -33,12 +25,19 @@ const serviceAreas = [
           <a class="button button--secondary" href="/referrals/">Get Help &amp; Referrals</a>
         </div>
       </div>
-      <aside class="editorial-hero__side" aria-labelledby="hero-access-heading">
+      <aside class="editorial-hero__side institutional-hero-side" aria-labelledby="hero-access-heading">
+        <img class="institutional-hero-art" src="/brand/institutional-abstract.svg" alt="" width="1200" height="550" decoding="async" />
         <p class="eyebrow">Welcome to CommuniCare</p>
         <h2 id="hero-access-heading">Because Access to Care Shouldn't Depend on Your Ability to Pay.</h2>
         <p>What distinguishes CommuniCare is not simply the services we provide, but our commitment to reaching individuals and families who might otherwise go without the support they need. Through publicly funded programs and community partnerships, we work to reduce financial and systemic barriers to care, expanding access for eligible individuals who are uninsured or underinsured.</p>
         <a href="/contact/" class="text-link">Contact CommuniCare</a>
       </aside>
+      <nav class="institutional-quick-access" aria-label="Quick access">
+        <QuickAccessCard title="Programs & Services" href="/programs-services/" symbol="services" />
+        <QuickAccessCard title="Get Help & Referrals" href="/referrals/" symbol="help" />
+        <QuickAccessCard title="Contact CommuniCare" href="/contact/" symbol="contact" />
+        <QuickAccessCard title="Resources" href="/resources/" symbol="resources" />
+      </nav>
     </div>
   </section>
 
@@ -84,12 +83,7 @@ const serviceAreas = [
         <p>CommuniCare offers a diverse range of clinical, preventive, rehabilitative, and supportive services designed to address these interconnected needs. Our programs emphasize early identification, individualized intervention, family engagement, and collaboration with the community systems that influence long-term stability and well-being.</p>
         <p>Whether providing direct behavioral health treatment, supporting youth and families during periods of crisis, coordinating services for individuals with complex needs, or partnering with courts and community agencies, our approach remains centered on helping people achieve meaningful and sustainable progress.</p>
       </div>
-      <ul class="editorial-program-grid" aria-label="CommuniCare program areas">
-        {serviceAreas.map((area) => (
-          <ServiceCard title={area} />
-        ))}
-        <ServiceCard title="Outpatient Behavioral Health Services" href="/programs-services/outpatient-behavioral-health/" />
-      </ul>
+      <ServiceGrid label="CommuniCare program directory" />
       <p class="editorial-section__closing">Explore our programs and services to learn how CommuniCare supports individuals, strengthens families, and contributes to healthier communities.</p>
       <a href="/programs-services/" class="button button--primary">View Programs &amp; Services</a>
     </div>
@@ -101,6 +95,7 @@ const serviceAreas = [
       <div class="editorial-section__intro">
         <p class="eyebrow">What Makes CommuniCare Different</p>
         <h2 id="approach-heading">Meeting People Where They Are. Supporting Them Where They Want to Go.</h2>
+        <img class="institutional-connections-art" src="/brand/connected-services.svg" alt="" width="1020" height="590" loading="lazy" decoding="async" />
       </div>
       <div class="editorial-section__body">
         <p>We recognize that behavioral health challenges rarely occur in isolation. Mental health conditions, substance use disorders, trauma, family instability, involvement with the justice system, and barriers to essential resources can significantly affect an individual's well-being and quality of life.</p>

@@ -1,0 +1,11 @@
+---
+import ServiceCard from './ServiceCard.astro';
+import { programDirectory } from '../data/program-directory';
+interface Props { label?: string; }
+const { label = 'CommuniCare programs and services' } = Astro.props;
+---
+<ul class="institutional-service-grid" aria-label={label}>
+  {programDirectory.map((program) => (
+    <ServiceCard title={program.title} href={'href' in program ? program.href : undefined}/>
+  ))}
+</ul>

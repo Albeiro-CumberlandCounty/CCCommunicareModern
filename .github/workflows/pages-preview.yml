@@ -34,9 +34,9 @@ jobs:
       - name: Rewrite generated pages for review URL
         run: node scripts/prepare-pages-preview.mjs
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Upload preview artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -49,4 +49,4 @@ jobs:
     steps:
       - name: Deploy preview
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

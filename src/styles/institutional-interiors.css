@@ -96,3 +96,41 @@
   .program-detail__content section { padding: 1.15rem; }
   .institutional-contact-panel__actions, .institutional-contact-panel__actions .button { width: 100%; }
 }
+
+/* Approved About introduction: readable prose + decorative institutional orbit visual. */
+.institutional-about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+.institutional-about-intro__content {
+  min-width: 0;
+}
+.institutional-about-intro__content p {
+  max-width: 72ch;
+}
+.institutional-about-intro__graphic {
+  min-width: 0;
+}
+.institutional-about-intro__graphic img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 960 / 600;
+  border-radius: 0.75rem;
+}
+@media (max-width: 62rem) {
+  .institutional-about-intro {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .institutional-about-intro__graphic {
+    width: 100%;
+    max-width: 42rem;
+  }
+}
+@media (max-width: 38rem) {
+  .institutional-about-intro {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600">
+  <!-- Decorative vector treatment based on the approved upper bubble/orbit concept. -->
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#eefbfc"/><stop offset="1" stop-color="#d9f1f5"/></linearGradient>
+    <linearGradient id="wave1" x1="0" x2="1" y1="0" y2="0"><stop stop-color="#1689c7"/><stop offset="1" stop-color="#03a4ac"/></linearGradient>
+    <linearGradient id="wave2" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0a678f"/><stop offset="1" stop-color="#064a78"/></linearGradient>
+  </defs>
+  <rect width="960" height="600" rx="24" fill="url(#sky)"/>
+  <g opacity=".45" fill="#83d6e7">
+    <circle cx="205" cy="382" r="145"/><circle cx="442" cy="256" r="166"/><circle cx="701" cy="185" r="160"/>
+  </g>
+  <g opacity=".36" fill="#1aacc0">
+    <circle cx="603" cy="340" r="205"/><circle cx="850" cy="305" r="210"/>
+  </g>
+  <path d="M0 423C184 252 299 277 473 350c143 60 260 50 487-125v375H0z" fill="url(#wave1)"/>
+  <path d="M0 488c219-116 372-115 538-43 136 59 274-3 422-135v290H0z" fill="#088ea3" opacity=".83"/>
+  <path d="M0 561c210-132 370-89 536-71 164 18 277-51 424-150v260H0z" fill="url(#wave2)"/>
+  <g fill="none" stroke="#fff" stroke-width="3" opacity=".94">
+    <path d="M25 543c176-214 365-270 573-171 119 56 221 32 362-68"/>
+    <path d="M160 598c172-194 325-224 471-139 98 58 200 49 329-21"/>
+    <path d="M480 599c87-235 196-361 480-441"/>
+  </g>
+  <g fill="#fff" stroke="#eef9fb" stroke-width="2">
+    <circle cx="225" cy="393" r="11"/><circle cx="482" cy="361" r="12"/>
+    <circle cx="705" cy="388" r="12"/><circle cx="841" cy="297" r="11"/>
+    <circle cx="600" cy="470" r="10"/>
+  </g>
+</svg>

@@ -38,9 +38,16 @@
   display: flex; align-items: center; font-size: 1rem; padding: 1.1rem;
 }
 .institutional-connections-art {
-  display: block; width: 100%; max-width: 35rem;
-  margin-block: 1.1rem 0; border: 1px solid #dae5e9;
-  border-radius: 0.8rem; background: #fff;
+  display: block;
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
+  aspect-ratio: 1020 / 380;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 @media (max-width: 62rem) {
   .institutional-quick-access { grid-template-columns: repeat(2,minmax(0,1fr)); }

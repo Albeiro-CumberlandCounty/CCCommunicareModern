@@ -70,3 +70,34 @@
   }
   .editorial-heading--programs h2 { max-width: 32ch; }
 }
+
+/*
+ * Homepage section palette. Explicit modifiers avoid layout changes caused by
+ * nth-of-type and prevent neighboring pale-blue sections from blending together.
+ * Keep these selectors after the existing institutional color rules.
+ */
+.home-section--welcome {
+  background: #ffffff;
+  border: 0;
+}
+.home-section--impact {
+  background: #edf4f7;
+  border: 0;
+}
+.home-section--programs {
+  background: #ffffff;
+  border: 0;
+}
+.home-section--difference {
+  background: #f7faf9;
+  border: 0;
+}
+.home-section--partnerships {
+  background: #eaf3ef;
+  border: 0;
+}
+.home-section--contact {
+  background: #ffffff;
+  border-top: 1px solid #cbdce3;
+  border-bottom: 0;
+}

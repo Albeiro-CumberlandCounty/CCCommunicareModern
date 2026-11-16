@@ -58,11 +58,6 @@
   padding-block: var(--editorial-space);
 }
 .editorial-section--light { background: #fff; }
-main > .editorial-section:nth-of-type(3) {
-  background: #eff6f6;
-  border-block: 1px solid var(--color-border);
-}
-main > .editorial-section:nth-of-type(5) { background: #fff; }
 .editorial-section--blue {
   background: linear-gradient(145deg, #e7f3f5, #edf6f0);
 }

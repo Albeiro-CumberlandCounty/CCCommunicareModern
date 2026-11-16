@@ -1,0 +1,72 @@
+/* Homepage desktop balance and contact-band separation (November 2026).
+   Scoped to existing homepage sections; Sarah's exact prose is unchanged. */
+.editorial-section--blue .editorial-heading--programs {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+  margin-bottom: 1.65rem;
+}
+.editorial-heading--programs .editorial-heading__title,
+.editorial-heading--programs .editorial-heading__copy {
+  min-width: 0;
+}
+.editorial-heading--programs h2 {
+  max-width: 22ch;
+  margin-bottom: 0;
+}
+.editorial-heading--programs .editorial-heading__copy p {
+  max-width: 72ch;
+  margin: 0;
+}
+.editorial-heading--programs .editorial-heading__copy p + p {
+  margin-top: .85rem;
+}
+.editorial-section--contact {
+  background: #e9f3f5;
+  border-top: 1px solid #bad6df;
+  color: #173649;
+}
+.editorial-section--contact h2 {
+  color: #075681;
+}
+.editorial-section--contact .eyebrow {
+  color: #0b6a38;
+}
+.editorial-section--contact .editorial-contact p {
+  color: #173649;
+}
+.editorial-section--contact .editorial-contact__actions .button--primary {
+  background: #075681;
+  border-color: #075681;
+  color: #fff;
+}
+.editorial-section--contact .editorial-contact__actions .button--primary:hover {
+  background: #064466;
+  border-color: #064466;
+  color: #fff;
+}
+.editorial-section--contact .editorial-contact__actions .button--secondary {
+  background: #fff;
+  border-color: #0b6a38;
+  color: #0b6a38;
+}
+.editorial-section--contact .editorial-contact__actions .button--secondary:hover {
+  background: #e5f4e8;
+  color: #084c2b;
+}
+.editorial-section--contact .editorial-contact__actions .text-link {
+  color: #075681;
+  font-weight: 750;
+}
+.editorial-section--contact .editorial-contact__actions .text-link:hover {
+  color: #063e5e;
+}
+@media (max-width: 60rem) {
+  .editorial-section--blue .editorial-heading--programs {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+  .editorial-heading--programs h2 { max-width: 32ch; }
+}
